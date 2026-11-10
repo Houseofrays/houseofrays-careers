@@ -1,0 +1,168 @@
+<title>House of Rays Careers</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Sora:wght@600;700&display=swap">
+<style>
+/* Layout: one narrow centered form, key NUPCO / driving fields grouped in a highlighted block */
+:root{
+  --bg:#f2f6f7; --surface:#ffffff; --ink:#10283a; --muted:#5a6f7d; --line:#d9e3e8;
+  --brand:#0b6f7a; --brand-ink:#ffffff; --brand-soft:#dff0f2; --warn:#b4540a; --ok:#177a4b; --ok-soft:#dcf1e6;
+  --font-display:'Sora',system-ui,sans-serif; --font-body:'IBM Plex Sans',system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0c1a24; --surface:#132735; --ink:#e6eff3; --muted:#93a9b6; --line:#243b4a;
+  --brand:#3fb6c2; --brand-ink:#06232a; --brand-soft:#12353d; --warn:#f0a35f; --ok:#5fcf97; --ok-soft:#133a29; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0c1a24; --surface:#132735; --ink:#e6eff3; --muted:#93a9b6; --line:#243b4a;
+  --brand:#3fb6c2; --brand-ink:#06232a; --brand-soft:#12353d; --warn:#f0a35f; --ok:#5fcf97; --ok-soft:#133a29; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:15px;line-height:1.5;padding-inline:16px;padding-block:0 48px}
+.wrap{max-width:680px;margin-inline:auto}
+.brand{display:flex;align-items:center;gap:12px;padding-block:20px;border-bottom:1px solid var(--line)}
+.mark{width:38px;height:38px;border-radius:9px;background:var(--brand);color:var(--brand-ink);display:grid;place-items:center;font-family:var(--font-display);font-weight:700;font-size:15px}
+.brand b{font-family:var(--font-display);font-size:16px;display:block;line-height:1.2}
+.brand span{font-size:12.5px;color:var(--muted)}
+h1{font-family:var(--font-display);font-size:clamp(24px,4vw,32px);line-height:1.15;margin:28px 0 6px;text-wrap:balance}
+.lede{color:var(--muted);margin:0 0 18px}
+.demo{background:var(--brand-soft);border:1px solid var(--line);border-radius:8px;padding:8px 12px;font-size:13px;margin-bottom:18px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px;display:grid;gap:16px}
+.sec{font-family:var(--font-display);font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);margin:0}
+.key{background:var(--brand-soft);border:1px solid var(--line);border-radius:10px;padding:16px;display:grid;gap:14px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:520px){.two{grid-template-columns:1fr}}
+label,.lab{font-size:13px;font-weight:500;display:grid;gap:5px}
+label small,.lab small{font-weight:400;color:var(--muted)}
+.req{color:var(--warn)}
+input[type=text],input[type=email],input[type=tel],select,textarea{width:100%;font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:9px 11px}
+input[type=file]{font:inherit;font-size:13px;max-width:100%}
+textarea{resize:vertical;min-height:70px}
+input:focus-visible,select:focus-visible,textarea:focus-visible,button:focus-visible{outline:2px solid var(--brand);outline-offset:1px}
+.seg{display:flex;gap:8px;flex-wrap:wrap}
+.seg label{display:flex;align-items:center;gap:6px;font-weight:400;font-size:14px;border:1px solid var(--line);background:var(--surface);border-radius:99px;padding:6px 14px;cursor:pointer}
+.seg input{accent-color:var(--brand);margin:0}
+.seg label:has(input:checked){border-color:var(--brand);background:var(--brand);color:var(--brand-ink)}
+.seg label:has(input:focus-visible){outline:2px solid var(--brand);outline-offset:1px}
+.btn{font:inherit;font-weight:500;border:1px solid var(--brand);background:var(--brand);color:var(--brand-ink);border-radius:8px;padding:11px 14px;cursor:pointer;width:100%;font-size:15px}
+.btn.ghost{background:transparent;color:var(--brand)}
+.err{color:var(--warn);font-size:13px;min-height:1em}
+.done{display:grid;gap:12px}
+.ref{background:var(--ok-soft);color:var(--ok);padding:8px 12px;border-radius:8px;display:inline-block;font-weight:600}
+dl{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;margin:0;font-size:14px}
+dt{color:var(--muted)} dd{margin:0}
+</style>
+
+<div class="wrap">
+  <div class="brand"><div class="mark">HR</div><div><b>House of Rays Medical Co.</b><span>Jeddah, Saudi Arabia</span></div></div>
+  <h1>Join our team</h1>
+  <p class="lede">Fill in the short form below. We review every application and contact suitable candidates. You can send your CV to office@houseofraysksa.info.</p>
+
+  <form class="card" id="form" novalidate>
+    <p class="sec">About you</p>
+    <div class="two">
+      <label for="name">Full name <span class="req">*</span><input type="text" id="name" autocomplete="name"></label>
+      <label for="nat">Nationality <span class="req">*</span><select id="nat"><option value="">Select</option><option>Saudi</option><option>Egyptian</option><option>Sudanese</option><option>Yemeni</option><option>Syrian</option><option>Jordanian</option><option>Pakistani</option><option>Indian</option><option>Filipino</option><option>Other</option></select></label>
+    </div>
+    <div class="two">
+      <label for="phone">Mobile / WhatsApp <span class="req">*</span><input type="tel" id="phone" autocomplete="tel" placeholder="05x xxx xxxx"></label>
+      <label for="email">Email<input type="email" id="email" autocomplete="email"></label>
+    </div>
+    <div class="two">
+      <label for="city">Current city<select id="city"><option>Jeddah</option><option>Riyadh</option><option>Makkah</option><option>Madinah</option><option>Dammam</option><option>Other</option></select></label>
+      <label for="pos">Position <span class="req">*</span><select id="pos"><option value="">Select</option><option>Sales Representative</option><option>Tender Specialist</option><option>Customer Service</option><option>Warehouse</option><option>Driver / Delivery</option><option>Accountant</option><option>Other</option></select></label>
+    </div>
+
+    <div class="two">
+      <label for="edu">Education <span class="req">*</span><select id="edu"><option value="">Select</option><option>High school</option><option>Diploma</option><option>Bachelor's degree</option><option>Master's degree or higher</option><option>Other</option></select></label>
+      <label for="major">Field of study<input type="text" id="major" placeholder="e.g. Pharmacy, Business"></label>
+    </div>
+
+    <p class="sec">Key requirements</p>
+    <div class="key">
+      <div class="lab">NUPCO Tenders experience <span class="req">*</span>
+        <div class="seg" role="radiogroup" aria-label="NUPCO Tenders experience">
+          <label><input type="radio" name="tend" value="None"> None</label>
+          <label><input type="radio" name="tend" value="Some (under 2 years)"> Some, under 2 yrs</label>
+          <label><input type="radio" name="tend" value="Experienced (2+ years)"> Experienced, 2+ yrs</label>
+        </div>
+      </div>
+      <div class="lab">NUPCO Marketplace experience <span class="req">*</span>
+        <div class="seg" role="radiogroup" aria-label="NUPCO Marketplace experience">
+          <label><input type="radio" name="mkt" value="None"> None</label>
+          <label><input type="radio" name="mkt" value="Some (under 2 years)"> Some, under 2 yrs</label>
+          <label><input type="radio" name="mkt" value="Experienced (2+ years)"> Experienced, 2+ yrs</label>
+        </div>
+      </div>
+      <div class="lab">Driving license <span class="req">*</span>
+        <div class="seg" role="radiogroup" aria-label="Driving license">
+          <label><input type="radio" name="lic" value="Saudi license"> Saudi</label>
+          <label><input type="radio" name="lic" value="International license"> International</label>
+          <label><input type="radio" name="lic" value="No license"> No license</label>
+        </div>
+      </div>
+      <div class="lab">Do you have a car? <span class="req">*</span>
+        <div class="seg" role="radiogroup" aria-label="Have car">
+          <label><input type="radio" name="car" value="Yes"> Yes</label>
+          <label><input type="radio" name="car" value="No"> No</label>
+        </div>
+      </div>
+    </div>
+
+    <p class="sec">Optional</p>
+    <label for="exp">Short note about your experience<textarea id="exp" placeholder="Previous companies, medical supplies experience, languages"></textarea></label>
+
+    <div style="position:absolute;left:-9999px" aria-hidden="true"><label>Leave empty<input type="text" id="website" tabindex="-1" autocomplete="off"></label></div>
+    <div class="err" id="err" role="alert"></div>
+    <button class="btn" type="submit" id="send">Submit application</button>
+  </form>
+
+  <section class="card" id="done" hidden>
+    <div class="done">
+      <div class="ref">Application received</div>
+      <p style="margin:0">Thank you. Our HR team will contact you if your profile matches an open position.</p>
+      <dl id="sum"></dl>
+      <button class="btn ghost" id="again" type="button">Submit another</button>
+    </div>
+  </section>
+</div>
+
+<script src="config.js"></script>
+<script>
+var $=function(i){return document.getElementById(i)};
+function val(n){var e=document.querySelector('input[name='+n+']:checked');return e?e.value:''}
+$('form').addEventListener('submit',function(e){
+  e.preventDefault();
+  var miss=[];
+  if(!$('name').value.trim())miss.push('full name');
+  if(!$('nat').value)miss.push('nationality');
+  if(!/^[+0-9 ]{9,15}$/.test($('phone').value.trim()))miss.push('a valid mobile number');
+  if($('email').value&&!/^\S+@\S+\.\S+$/.test($('email').value))miss.push('a valid email');
+  if(!$('pos').value)miss.push('position');
+  if(!$('edu').value)miss.push('education');
+  if(!val('tend'))miss.push('NUPCO Tenders experience');
+  if(!val('mkt'))miss.push('NUPCO Marketplace experience');
+  if(!val('lic'))miss.push('driving license');
+  if(!val('car'))miss.push('car (yes or no)');
+  if(miss.length){$('err').textContent='Please complete: '+miss.join(', ')+'.';return}
+  $('err').textContent='';
+  if($('website').value){return}
+  var cfg=window.HR_CONFIG||{};
+  if(!cfg.url||cfg.url.indexOf('YOUR-')>-1){$('err').textContent='The form is not connected to the database yet.';return}
+  var row={
+    full_name:$('name').value.trim(), nationality:$('nat').value, phone:$('phone').value.trim(),
+    email:$('email').value.trim()||null, city:$('city').value, position:$('pos').value,
+    education:$('edu').value, field_of_study:$('major').value.trim()||null,
+    nupco_tenders:val('tend'), nupco_marketplace:val('mkt'), driving_license:val('lic'),
+    has_car:val('car')==='Yes', notes:$('exp').value.trim()||null
+  };
+  var btn=$('send');btn.disabled=true;btn.textContent='Sending...';
+  fetch(cfg.url+'/rest/v1/applications',{method:'POST',headers:{'apikey':cfg.anonKey,'Authorization':'Bearer '+cfg.anonKey,'Content-Type':'application/json','Prefer':'return=minimal'},body:JSON.stringify(row)})
+  .then(function(r){
+    if(!r.ok)throw new Error('HTTP '+r.status);
+    var rows=[['Name',row.full_name],['Position',row.position],['NUPCO Tenders',row.nupco_tenders],['NUPCO Marketplace',row.nupco_marketplace]];
+    var dl=$('sum');dl.innerHTML='';
+    rows.forEach(function(x){var a=document.createElement('dt'),b=document.createElement('dd');a.textContent=x[0];b.textContent=x[1];dl.appendChild(a);dl.appendChild(b)});
+    $('form').hidden=true;$('done').hidden=false;
+  })
+  .catch(function(){$('err').textContent='Sorry, your application was not sent. Please try again, or email office@houseofraysksa.info.'})
+  .finally(function(){btn.disabled=false;btn.textContent='Submit application'});
+});
+$('again').addEventListener('click',function(){$('form').reset();$('done').hidden=true;$('form').hidden=false});
+</script>
