@@ -1,0 +1,16 @@
+# Keeps the free Supabase project from being paused for inactivity.
+name: Keep Supabase awake
+on:
+  schedule:
+    - cron: "17 6 */3 * *"   # every 3 days
+  workflow_dispatch:
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call ping()
+        run: |
+          curl -fsS -X POST "https://etkpugfbwhpaefhurvsu.supabase.co/rest/v1/rpc/ping" \
+            -H "apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImV0a3B1Z2Zid2hwYWVmaHVydnN1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTQzMTgwNTQsImV4cCI6MjEwOTg5NDA1NH0.ClOCPXx8GM-S4iPzdYJG9-aP95hfKvH53UQYUf31ND0" \
+            -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImV0a3B1Z2Zid2hwYWVmaHVydnN1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTQzMTgwNTQsImV4cCI6MjEwOTg5NDA1NH0.ClOCPXx8GM-S4iPzdYJG9-aP95hfKvH53UQYUf31ND0" \
+            -H "Content-Type: application/json" -d '{}'
